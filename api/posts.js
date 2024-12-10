@@ -83,12 +83,12 @@ router.put("/:courseCode/:id", async (req, res) => {
 });
 
 // Delete a post by courseCode and id
-router.delete("/:courseCode/:id", async (req, res) => {
-  const { courseCode, id } = req.params;
+router.delete("/:id", async (req, res) => {
+  const { id } = req.params;
 
   try {
-    const result = await Post.deleteOne({ courseCode, id }); // Delete by courseCode and id
-    if (result.deletedCount === 0) {
+    const result = await Post.findByIdAndDelete(id);
+    if (!result) {
       return res.status(404).json({ error: "Post not found" });
     }
     res.sendStatus(204); // Successfully deleted
