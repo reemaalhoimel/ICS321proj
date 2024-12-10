@@ -1,0 +1,368 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b7a78;
+    padding: 15px 30px;
+    color: white;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+nav a, .about-us {
+    color: #000;
+    background-color: #fff;
+    border-radius: 9px;
+    padding: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 100px;
+    border-radius: 9px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown .arrow {
+    margin-left: 5px;
+    transition: transform 0.5s;
+}
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 600px;
+}
+.search-bar input[type="text"] {
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    width: 100%;
+    outline: none;
+}
+.search-bar button {
+    background: transparent url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg") no-repeat center;
+    background-size: 20px 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+.search-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 440px;
+    color: #333;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 10px auto;
+}
+.course-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 9px;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+.delete-btn {
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #b40000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Popup Styling */
+.popup-overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-container {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.popup-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.popup-header .close-btn {
+    background-color: #B46161;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-header .close-btn:hover {
+    background-color: #933939;
+}
+
+
+#addCoursePopup .cancel-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#addCoursePopup .cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+
+#addCoursePopup .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allow error message to move to a new line */
+}
+
+
+#addCoursePopup .form-group label {
+    flex: 0 0 30%;
+    font-weight: bold;
+    text-align: left;
+}
+
+#addCoursePopup .form-group input,
+#addCoursePopup .form-group select,
+#addCoursePopup .form-group textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#addCoursePopup .form-group textarea {
+    resize: vertical;
+    min-height: 50px;
+}
+
+#addCoursePopup .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#addCoursePopup .save-btn {
+    background-color: #739E75;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#addCoursePopup .save-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.deleteCoursepopup,
+#addCoursePopup.addCoursepopup {
+    display: none; /* Ensured both popups are hidden initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    margin: 20px 0; /* Adds some vertical margin */
+    gap: 10px; /* Adds space between the buttons */
+}
+
+#addCourseBtn, #deleteCourseBtn {
+    color: #fff; /* Set text color to white */
+    background-color: #2b7a78; /* Set button background color */
+    border-radius: 9px;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 5px;
+}
+#addCourseBtn:hover, #deleteCourseBtn:hover {
+    background-color: #1f5f56; /* Darker color for hover effect */
+}
+
+
+
+/* Course Colors */
+.course-math { background-color: #f8b6b6; }
+.course-engl { background-color: #b6f8b6; }
+.course-swe { background-color: #b6d8f8; }
+
+/* Error message styling */
+.error-message {
+    color: rgb(199, 47, 47);
+    font-size: 14px;
+    margin-top: 5px;
+    width: calc(100% - 30%); /* Align with input width */
+    margin-left: 30%; /* Align under the input instead of label */
+
+}
+  
+
+/* Input field with error */
+.input-error {
+    border: 2px solid rgb(199, 47, 47);
+    box-sizing: border-box;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .search-bar {
+        max-width: 90%;
+    }
+    .search-title {
+        margin: 0 0 10px 0;
+        font-size: 1.2em;
+    }
+    header {
+        padding: 10px 20px;
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+    nav ul {
+        gap: 10px;
+    }
+    #addCourseBtn, #deleteCourseBtn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .course-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
+@media (min-width: 993px) {
+    .course-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}

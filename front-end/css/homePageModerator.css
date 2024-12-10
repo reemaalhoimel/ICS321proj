@@ -1,0 +1,255 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2b7a78;
+    padding: 15px 30px;
+    color: white;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    margin-right: 5px;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+nav a {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border-radius: 9px;
+    padding: 4px;
+    text-decoration: none;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.about-us {
+    color: rgb(11, 11, 11);
+    background-color: #DEF2F1;
+    padding: 4px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 100px;
+    border-radius: 9px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* Arrow styling */
+.dropdown .arrow {
+    margin-left: 5px;
+    transition: transform 0.5s;
+}
+.dropdown:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.selected-department {
+    border-left: 4px solid #3AAFA9; /* Line on the left */
+    font-weight: 400px;
+    background-color: #f0f0f0; /* Optional: highlight selected item */
+}
+
+/* Department button */
+#departmentButton {
+    min-width: 90px; /* Fixed minimum width */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Space out the text and arrow */
+    align-items: center; /* Center align vertically */
+    padding: 4px 4px; /* Add padding for better click area */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.arrow {
+
+    right: 10px;
+    transition: transform 0.5s;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    flex-direction: column;
+}
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 600px;
+}
+.search-bar input[type="text"] {
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    width: 100%;
+    outline: none;
+}
+
+/* Magnifying glass button styling */
+.search-bar button {
+    background-color: transparent;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg");
+    background-size: 20px 20px; /* Size of the icon */
+
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px; /* Width to contain the icon */
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+.search-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-right: 440px;
+    color: #333;
+}
+
+/* Course Buttons */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+/* Course button styling */
+.course-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 9px;
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 5px; /* Adds space between the message and the input */
+    display: block; /* Ensure it is displayed above the input */
+}
+
+/* Styling for input fields with errors */
+input.error-border,
+select.error-border,
+textarea.error-border {
+    border: 2px solid red; /* Red border for inputs with errors */
+}
+
+@media (max-width: 600px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 courses per row on small screens */
+        gap: 15px;
+    }
+
+    .search-bar {
+        max-width: 90%; /* Allow search bar to use full width on small screens */
+    }
+
+    .search-title {
+        font-size: 1.2em;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap; /* Prevents header items from wrapping */
+        padding: 10px 20px;
+    }
+    header h1 {
+        font-size: 1.2em; /* Slightly reduce title font size */
+    }
+    nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+    nav a, .about-us {
+        font-size: 0.8em; /* Reduce font size for navigation links */
+    }
+
+    #addCourseBtn, #deleteCourseBtn {
+        font-size: 0.9em; /* Slightly smaller font size */
+        padding: 8px 15px; /* Adjust padding for a smaller button */
+        margin: 8px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+    .course-grid {
+        grid-template-columns: repeat(3, 1fr); /* Show 3 courses per row on medium screens */
+        gap: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .course-grid {
+        grid-template-columns: repeat(4, 1fr); /* Show 4 courses per row on larger tablets */
+        gap: 25px;
+    }
+}
+
+@media (min-width: 993px) {
+    .course-grid {
+        grid-template-columns: repeat(4, 1fr); /* Show 4 courses per row on desktops */
+        gap: 30px;
+    }
+}
+
+/* Different background colors for different courses */
+.course-math { background-color: #f8b6b6; } /* Light red */
+.course-ENGL { background-color: #b6f8b6; } /* Light green */
+.course-SWE { background-color: #b6d8f8; } /* Light blue */

@@ -1,0 +1,371 @@
+/* General container styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3AAFA9;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: #2B7A78;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.department-select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Course information styling */
+.course-info {
+    background-color: #E6F7F5;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.credits {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.prerequisite {
+    font-style: italic;
+}
+
+/* Review section styling */
+.reviews {
+    margin: 20px;
+}
+
+.review {
+    background-color: #FAFAFA;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reply-header {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    padding-left:15px;
+    margin-top: 7px;
+    border-top: 1px solid #e2e0e0;
+    background-color: #f0f0f0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    padding-top: 3px;
+}
+
+.review-reply {
+    background-color: #FAFAFA;
+    
+}
+
+.commentHeader {
+    color: #6a6a6a;
+    font-size: 0.9rem;
+    margin-top: 7px;
+}
+
+.user-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    color: #2B7A78;
+}
+
+.review-content {
+    margin-bottom: 10px;
+    color: #333;
+    word-wrap: break-word; /* Ensure text wraps within the container */
+}
+
+.review-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
+}
+
+.review-actions button {
+    background-color: #2B7A78;
+    color: #ffffff;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.review-actions .upvote,
+.review-actions .downvote {
+    background-color: #3AAFA9;
+}
+
+.upvote.active {
+    background-color: #385553; /* Example color for active upvote */
+    color: rgb(183, 183, 183);
+}
+
+.downvote.active {
+    background-color: #385553; /* Example color for active downvote */
+    color: rgb(183, 183, 183);
+}
+
+.review-actions .comment {
+    background-color: #739E75;
+    font-size: 16px;
+}
+
+.vote-count {
+    font-size: 16px;
+    margin: 0 5px;
+    color: #333;
+}
+
+/* Review input form styling */
+#reviewInputContainer {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.review-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.submit-review {
+    background-color: #2B7A78;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*reply form styling */
+
+#replyFormContainer {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+.reply-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.submit-reply {
+    background-color: #2B7A78;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background-color: #D9534F; /* Keep the red background */
+    color: white; /* Make the X white */
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px; /* Adjust size as needed */
+    font-weight: bold; /* Make the X bold */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p.comment {
+    color: #6a6a6a;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*border-bottom: 1px solid #a4a2a2;*/
+    margin-left: 15px;
+    padding-left: 15px;
+    /*margin-top: 7px;*/
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #f0f0f0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#edit-preview
+{
+    width: 45px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 100px;
+    margin-right: 30px;
+    background-color: #B46161;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-actions .edit-post {
+    width: 45px;
+    height: 32px;
+    background-color: #B46161;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    left: 15px;
+    top: 1px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.edit-post {
+    background-color: #B46161;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content .dropdown-item {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content .dropdown-item:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.delete-post {
+    color: #D9534F;
+    font-weight: bold;
+}
+
+.ban-user {
+    color: #B46161;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        max-width: 400px;
+        border-radius: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .course-info h2 {
+        font-size: 24px;
+    }
+
+    .review {
+        padding: 10px;
+    }
+
+    #reviewInputContainer,
+    #replyFormContainer {
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 10px;
+    }
+}

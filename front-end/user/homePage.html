@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Guide</title>
+    <link rel="stylesheet" href="../css/homePage.css">
+</head>
+<body>
+<header>
+    <h1>Resource Guide</h1>
+    <nav>
+        <ul>
+            <li><a href="/aboutus" class="about-us">About us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" id="departmentButton">Department <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="javascript:void(0)" onclick="filterCourses('math'); selectDepartment('MATH')">MATH</a>
+                    <a href="javascript:void(0)" onclick="filterCourses('SWE'); selectDepartment('SWE')">SWE</a>
+                    <a href="javascript:void(0)" onclick="filterCourses('ENGL'); selectDepartment('ENGL')">ENGL</a>
+                    <a href="javascript:void(0)" onclick="Department(); selectDepartment('Department')">Department</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="search-container">
+    <div class="search-title">Search Courses</div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search Course by Name or Code (ex: ICS 104)" onkeyup="searchCourses()">
+        <button type="submit"></button>
+    </div>
+</div>
+
+<div class="course-grid"></div>
+
+<script src="../js/homePage.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative; 
+  flex-direction: column;
+}
+
+/* Resource Guide Header in the top-left corner */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3AAFA9;
+  margin-bottom: 15px;
+}
+
+/* Container for the login card */
+.container {
+  display: flex;
+  width: 60%;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section with the image */
+.left-section {
+  width: 50%;
+  background: url('../image/KFUPM_-2.jpg') no-repeat center center/cover;
+  border-radius: 20px 0 0 20px; 
+}
+
+
+/* Right section with the login form */
+.loginForm {
+  width: 50%;
+  padding: 50px;
+  background-color: #3AAFA9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Login Text */
+.loginForm h2 {
+  text-align: left;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Input group styling */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input:focus {
+  outline: 2px solid #cfd8dc;
+}
+
+/* Login button styling */
+.button {
+  padding: 12px 20px;
+  background-color: white;
+  color: #3AAFA9;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffffffcc;
+}
+
+/* Forgot Password and Sign-up Links */
+.forgot-password {
+  color: #ffffffaa;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px; /* Adds spacing below */
+  transition: color 0.3s ease;
+  text-align: left; /* Aligns with the inputs */
+}
+
+/* Form Styling */
+.forgotPasswordForm {
+  width: 50%;
+  padding: 40px;
+  background-color: #3AAFA9;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 10px;
+  text-align: left;
+}
+
+.forgot-password:hover {
+  color: white;
+}
+
+.signup-text {
+  color: #ffffffaa;
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.signup-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.signup-link:hover {
+  color: #cfd8dc;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+/* Error message styling */
+.error-message {
+  color: rgb(199, 47, 47);
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Input field with error */
+.input-error {
+  border: 2px solid rgb(199, 47, 47);
+}
+
+/* Form Error Message Styling */
+.form-error {
+  background-color: #f8d7da;
+  color:rgb(199, 47, 47);
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* login Form and Input Styling */
+.loginForm {
+  width: 50%;
+  padding: 50px;
+  background-color: #3AAFA9;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* signup Form Styling */
+.signupForm {
+  width: 50%;
+  padding: 40px;
+  background-color: #3AAFA9;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+  width: 300px;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: #3AAFA9;
+  border-radius: 5px;
+  transition: width 2s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 20px;
+  }
+
+  .left-section {
+      width: 100%;
+      height: 200px;
+      border-radius: 20px 20px 0 0;
+  }
+
+  .forgotPasswordForm, .loginForm, .signupForm { /* Target all forms for mobile view */
+      width: 100%; /* Make form full-width */
+      padding: 30px;
+      border-radius: 0 0 20px 20px; /* Remove side radius for mobile */
+      box-sizing: border-box;
+  }
+
+  .forgot-password {
+      text-align: center;
+  }
+
+  .button {
+      margin-top: 10px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.circular-progress {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+

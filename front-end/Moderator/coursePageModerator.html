@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <link rel="stylesheet" href="../css/coursePageModerator.css">
+    <link rel="stylesheet" href="../css/popupStyle.css">
+</head>
+<body>
+    <!--<div class="container">-->
+        <!-- Header section containing the title and navigation buttons -->
+        <header class="header">
+            <h1 class="logo"><a href="/homePageModerator.html">Resource Guide</a></h1>
+            <nav class="nav">
+                <button class="nav-btn" id="aboutUs">About Us</button>
+                <!--<select class="department-select">
+                    <option value="">Department</option>
+                    <option value="COE">COE</option>
+                    <option value="ICS">ICS</option>
+                    <option value="ITD">ITD</option>
+                    <option value="MATH">MATH</option>
+                </select>-->
+            </nav>
+        </header>
+        
+        <!-- Course information section -->
+        <section class="course-info" id="courseInfo">
+          <!-- Course details will be dynamically generated here -->
+      </section>
+
+        <!-- Reviews section -->
+        <section class="reviews" id="reviewsContainer">
+            <!-- Reviews will be dynamically generated here -->
+        </section>
+        
+        <!-- Form for posting a new review at the end of the page -->
+        <section class="review-input-container" id="reviewInputContainer">
+            <input type="text" class="review-input" placeholder="Write your opinion on the best sources for this course" id="reviewInput">
+            <button id="submitReviewButton" class="submit-review">Post Review &#10148;</button>
+        </section>
+
+        <!-- reply form (initially hidden) -->
+        <section class="reply-form" id="replyFormContainer" style="display: none;">
+            <input type="text" class="reply-input" placeholder="Write your reply..." id="replyInput">
+            <div class="form-buttons">
+               <button class="cancel-button" id="cancel-button" onclick="resetToDefault()">X</button> <!-- Simple X with white color -->
+               <button class="submit-reply" id="submit-reply">Send &#10148;</button>
+            </div>
+        </section>  
+
+        <!-- <div class="popup-overlay">
+            <div class="popup-container">
+             <div class="header">
+              <h2>Edit Course Information</h2>
+              <button type="button" class="cancel-btn">Cancel</button>
+             </div>
+              <form>
+                <div class="form-group">
+                  <label for="course-name">Course Name</label>
+                  <input type="text" id="course-name" name="course-name" >
+                </div>
+                <div class="form-group">
+                  <label for="department">Department</label>
+                  <input type="text" id="department" name="department">
+                </div>
+                <div class="form-group">
+                  <label for="prerequisite">Prerequisite</label>
+                  <input type="text" id="prerequisite" name="prerequisite">
+                </div>
+                <div class="form-group">
+                  <label for="Description">Description</label>
+                  <input type="text" id="description" name="description">
+                </div>
+                
+                <div class="form-group">
+                  <label for="credit-hours">Credit Hours</label>
+                  <input type="text" id="credit-hours" name="credit-hours">
+                </div>
+                <div class="buttons">
+                  <button type="button" class="save-btn" id="save-btn">Save</button>
+                </div>
+              </form>
+            </div>
+        </div> -->
+        
+
+    <!--</div>-->
+    <script src="../js/coursePageModerator.js"></script> <!-- Include your JavaScript file -->
+</body>
+</html>

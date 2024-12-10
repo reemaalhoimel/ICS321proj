@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Guide</title>
+    
+    <link rel="stylesheet" href="../css/homePageAdmin.css">
+</head>
+<body>
+
+<header>
+    <h1>Resource Guide</h1>
+    <nav>
+        <ul>
+            <li><a href="/adminaboutus" class="about-us">About Us</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" id="departmentButton">Department <span class="arrow">&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="javascript:void(0)" onclick="filterCourses('math'); selectDepartment('MATH')">MATH</a>
+                    <a href="javascript:void(0)" onclick="filterCourses('swe'); selectDepartment('SWE')">SWE</a>
+                    <a href="javascript:void(0)" onclick="filterCourses('engl'); selectDepartment('ENGL')">ENGL</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="search-container">
+    <div class="search-title">Search Courses</div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search Course by Name or Code (ex: ICS 104)" onkeyup="searchCourses()">
+        <button type="submit"></button>
+    </div>
+</div>
+
+<div class="button-container">
+    <button id="addCourseBtn" onclick="openAddCoursePopup()">Add Course</button>
+    <button id="deleteCourseBtn" onclick="toggleDeleteMode()">Delete Course</button>
+</div>
+
+<div class="course-grid">
+    <!-- Courses will be displayed here dynamically -->
+</div>
+
+<!-- Add Course Popup -->
+<div class="popup-overlay" id="addCoursePopup">
+    <div class="popup-container">
+        <div class="popup-header">
+            <h3>Add New Course</h3>
+            <button class="close-btn" onclick="closeAddCoursePopup()">Cancel</button>
+        </div>
+        <form id="addCourseForm">
+            <div class="form-group">
+                <label for="courseNameInput">Course Name:</label>
+                <input type="text" id="courseNameInput" required>
+                <div class="error-message" style="display:none;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="courseDepartment">Department:</label>
+                <select id="courseDepartment" required>
+                    <option value="">Select Department</option>
+                    <option value="math">Math</option>
+                    <option value="swe">Software Engineering</option>
+                    <option value="engl">English</option>
+                </select>
+                <div class="error-message" style="display:none;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="courseCode">Course Code:</label>
+                <input type="text" id="courseCode" required>
+                <div class="error-message" style="display:none;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="courseDescription">Description:</label>
+                <textarea id="courseDescription" required></textarea>
+                <div class="error-message" style="display:none;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="LecCredits">Lecture Hours:</label>
+                <input type="number" id="LecCredits" min="0" required>
+                <div class="error-message" style="display:none;"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="LabCredits">Lab Hours:</label>
+                <input type="number" id="LabCredits" min="0" required>
+                <div class="error-message" style="display:none;"></div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="save-btn" onclick="addCourse()">Add Course</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Delete Course Popup -->
+<div class="popup-overlay" id="deletePopupOverlay" onclick="closeDeletePopup()"></div>
+<div class="deleteCoursepopup" id="deleteCoursePopup">
+    <h3>Are you sure you want to delete <span id="deleteCourseName"></span>?</h3>
+    <button onclick="confirmDeleteCourse()" style="background-color: rgb(180, 0, 0); color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Yes, I'm sure</button>
+    <button onclick="closeDeletePopup()" style="background-color: #2b7a78; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Cancel</button>
+</div>
+
+<script src="../js/homePageAdmin.js"></script>
+
+</body>
+</html>

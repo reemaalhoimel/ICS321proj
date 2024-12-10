@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Page</title>
+    <link rel="stylesheet" href="../css/CourseStyle.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Resource Guide</h1>
+        <nav class="nav">
+            <button class="nav-btn" onclick="window.location.href='aboutUs.html';">About Us</button>
+            <select class="department-select">
+                <option value="">Department</option>
+                <option value="COE">COE</option>
+                <option value="ICS">ICS</option>
+                <option value="ITD">ITD</option>
+                <option value="MATH">MATH</option>
+            </select>
+        </nav>
+    </header>
+    
+    <section class="course-info" id="courseInfo">
+        <!-- Course details will be dynamically generated here -->
+    </section>
+
+    <section class="reviews" id="reviewsContainer">
+        <!-- Comments heading -->
+        <h3>Comments</h3>
+        <!-- Comments will be dynamically generated here -->
+    </section>
+    
+    <section class="review-input-container" id="reviewInputContainer">
+        <input type="text" class="review-input" placeholder="Write your opinion on the best sources for this course" id="reviewInput">
+        <button id="submitReviewButton" class="submit-review">Post Review &#10148;</button>
+    </section>
+
+    <section class="reply-form" id="replyFormContainer" style="display: none;">
+        <input type="text" class="reply-input" placeholder="Write your reply..." id="replyInput">
+        <div class="form-buttons">
+            <button class="cancel-button" id="cancel-button" onclick="resetToDefault()">X</button>
+            <button class="submit-reply" id="submit-reply">Send &#10148;</button>
+        </div>
+    </section>  
+
+    <script src="../js/coursePage.js"></script>
+</body>
+</html>
